@@ -62,6 +62,17 @@ $ make -j4 # -jN = build on N threads
 $ ./Binaries/Release/smw ../data
 ```
 
+On raspberry-pi: http://72dpiarmy.supersanctuary.net/index.php?topic=11144.0
+
+edit: *CMakeLists.txt* on line #98 comment out **add_definitions(-mfpu=neon -mfloat-abi=softfp)**
+
+```sh
+$ unzip data.zip
+$ mkdir Build && cd Build
+$ cmake .. -DNO_NETWORK=1
+$ ./Binaries/Release/smw ../data
+```
+
 Currently, the following separate build targets are defined for `make`:
 
 - smw
